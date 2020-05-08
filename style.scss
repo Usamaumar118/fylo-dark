@@ -144,3 +144,40 @@ p{
         }
     }
 }
+
+.productive{
+    background-color: var(--bg-main);
+    padding: 15rem 0;
+    &__content{
+        width: 80%;
+        max-width: 120rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        align-items: center;
+    }
+
+    &__text{
+        &__heading{
+            font-size: 4.2rem;
+            margin-bottom: 2rem;
+        }    
+        &__para{
+            margin-bottom: 1rem;
+        }
+
+        &__btn{
+            display: flex;
+            align-items: center;
+            width: max-content;
+            color: var(--c-cyan);
+            border-bottom: 2px solid currentColor;
+            padding-bottom: .5rem;
+
+            &__icon{
+                margin-left: .5rem;
+            }
+        }
+    }
+}
+
