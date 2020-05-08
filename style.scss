@@ -1,0 +1,119 @@
+:root{
+--bg-intro-and-signup: hsl(217, 28%, 15%);
+--bg-main: hsl(218, 28%, 13%);
+--bg-footer: hsl(216, 53%, 9%);
+--bg-testimonial: hsl(219, 30%, 18%);
+
+--bg-btn: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%) ) ;
+
+--c-cyan: hsl(176, 68%, 64%);
+--c-white: hsl(0, 0%, 100%);
+--c-white-light: hsl(0, 0%, 90%);
+
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+//INCLUDE FONTS
+
+html{
+    font-family: 'open sans', sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--c-white);
+    font-size: 1.6rem;
+    line-height: 1.5s;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--c-white);
+    display: inline-block;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'raleway', sans-serif;
+    color: var(--c-white);
+}
+
+p{
+    color: var(--c-white-light) ;
+}
+
+
+.header{
+    background: url('images/bg-curvy-desktop.svg') no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    background-color: var(--bg-intro-and-signup);
+    padding: 5rem;
+    padding-bottom: 20rem;
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__hero{
+        width: 90%;
+        max-width: 72rem;
+        margin: 0  auto;
+        padding: 5rem 0;
+        text-align: center;
+
+        &__heading{
+            font-size: 4.2rem;
+            margin: 3rem 0;
+        }
+
+        &__para{
+            font-size: 1.8rem;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+.nav{
+    &__list{
+        display: flex;
+
+        &__item{
+            display: block;
+            margin-left: 5rem;
+        }
+    }
+}
+
+.btn{
+    font-size: 1.6rem;
+    background: var(--bg-btn);
+    font-weight: 600;
+    padding: 1rem 4rem;
+    border-radius: 22rem;
+    margin-top: 2rem;
+}
+
