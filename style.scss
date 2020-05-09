@@ -25,6 +25,20 @@ html{
     font-family: 'open sans', sans-serif;
     font-size: 62.5%;
     box-sizing: border-box;
+
+    @media (max-width: 1480px){
+        font-size: 60%;
+    }
+    @media (max-width: 1100px){
+        font-size: 58%;
+    }
+    @media (max-width: 750px){
+        font-size: 55%;
+    }
+
+    @media (max-width: 450px){
+        font-size: 52%;
+    }
 }
 
 
@@ -37,6 +51,10 @@ body{
     color: var(--c-white);
     font-size: 1.6rem;
     line-height: 1.5s;
+
+    @media (max-width: 1100px){
+        font-size: 1.4rem;
+    }
 }
 
 main{
@@ -56,6 +74,21 @@ a{
 img{
     max-width: 100%;
 }
+.header__logo__img,
+.footer__logo__img{
+    @media (max-width: 1480px){
+        max-width: 18rem;
+    }
+    @media (max-width: 1100px){
+        max-width: 16rem;
+    }
+    @media (max-width: 750px){
+        max-width: 10rem;
+    }
+
+}
+
+
 
 h1,
 h2,
@@ -80,6 +113,14 @@ p{
     padding: 5rem;
     padding-bottom: 20rem;
 
+    
+    @media (max-width: 750px){
+        background: url('images/bg-curvy-mobile.svg') no-repeat;
+        background-size: 150%;
+        background-position: bottom;
+        background-color: var(--bg-intro-and-signup);
+    }
+
     &__top{
         display: flex;
         align-items: center;
@@ -96,12 +137,31 @@ p{
         &__heading{
             font-size: 4.2rem;
             margin: 3rem 0;
+            @media (max-width: 1480px){
+                font-size: 3.8rem;
+            }
+
+            @media (max-width: 750px){
+                font-size: 2.8rem;
+            }
+
+            
+            @media (max-width: 450px){
+                font-size: 2.4rem;
+            }
         }
 
         &__para{
             font-size: 1.8rem;
             width: 80%;
             margin: 0 auto;
+
+            @media (max-width: 1100px){
+                font-size: 1.6rem;
+            }
+            @media (max-width: 750px){
+                width: 100%;
+            }
         }
     }
 
@@ -114,6 +174,14 @@ p{
         &__item{
             display: block;
             margin-left: 5rem;
+
+            &--first{
+                margin-left: 0;
+            }
+
+            @media (max-width: 750px){
+                margin-left: 1.5rem;
+            }
         }
     }
 }
@@ -139,6 +207,9 @@ p{
         align-items: center;
         gap: 5rem;
         justify-content: space-between;
+        @media (max-width: 750px){
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item{
@@ -146,6 +217,9 @@ p{
 
         &__img{
             margin-bottom: 2rem;
+            @media (max-width: 750px){
+                width: 8rem;
+            }
         }
 
         &__heading{
@@ -163,14 +237,23 @@ p{
         max-width: 120rem;
         margin: 0 auto;
         display: grid;
+        gap: 5rem;
         grid-template-columns: 60% 1fr;
         align-items: center;
+
+        @media (max-width: 750px){
+            grid-template-columns: 1fr;
+
+        }
     }
 
     &__text{
         &__heading{
             font-size: 4.2rem;
             margin-bottom: 2rem;
+            @media (max-width: 1480px){
+                font-size: 3.8rem;
+            }
         }    
         &__para{
             margin-bottom: 1rem;
@@ -201,19 +284,30 @@ p{
 
     
     &__content{
-        width: 80%;
+        width: 90%;
+        max-width: 145rem;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(3, 45rem);
+        grid-template-columns: repeat(3, 1fr);
         justify-content: center;
+        align-items: center;
         gap: 5rem;
+
+        
+        @media (max-width: 1050px){
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item{
         background-color: var(--bg-testimonial);
         border-radius: 1rem;
         padding: 4rem;
+        max-width: 45rem;
 
+        @media (max-width: 1050px){
+            max-width: 100%;
+        }
 
         &--1{
             position: relative;
@@ -228,6 +322,7 @@ p{
 
         &__client{
             display: flex;
+            align-items: center;
             margin-top: 2rem;
 
             &__img{
@@ -268,6 +363,10 @@ p{
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 700px){
+            flex-direction: column;
+        }
+
         &__email{
             background-color: var(--c-white);
             width: 60%;
@@ -275,6 +374,10 @@ p{
             border-radius: 22rem;
             padding: 1.5rem 4rem;
 
+            @media (max-width: 700px){
+                width: 100%;
+                margin-bottom: 2rem;
+            }
             
         }
 
@@ -286,6 +389,9 @@ p{
             font-weight: 600;
             padding: 1.5rem 4rem;
             border-radius: 22rem;
+            @media (max-width: 700px){
+                width: 100%;
+            }
         }
     }
 }
@@ -303,6 +409,11 @@ p{
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 2fr) repeat(3, 1fr);
+
+
+        @media (max-width: 1050px){
+            grid-template-columns: 1fr;
+        }
     
         &__address{
             display: flex;
@@ -335,12 +446,21 @@ p{
         }
 
 
-        &__social__item{
+        &__social{
+
+            @media (max-width: 1100px){
+                justify-self: center;
+            }
+
+            &__item{
             border: 2px solid var(--c-white);
             width: 4rem;
             height: 4rem;
             border-radius: 50%;
             position: relative;
+            margin-right: 1rem;
+
+            
 
             & img{
                 position: absolute;
@@ -350,7 +470,7 @@ p{
                 transform: translate(-50%, -50%);
             }
         }
-
+    }
     
     }
 
