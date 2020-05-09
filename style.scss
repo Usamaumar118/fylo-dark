@@ -439,6 +439,10 @@ p{
             }
         }
         &__nav{
+            
+            @media (max-width: 1100px){
+                margin-top: 2rem;
+            }
 
             &__list__item{
                 margin-bottom: 2rem;
